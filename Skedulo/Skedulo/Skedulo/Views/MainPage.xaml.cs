@@ -32,6 +32,12 @@ namespace Skedulo.Views
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
+                    case (int)MenuItemType.Question3:
+                        MenuPages.Add(id, new NavigationPage(new Question3Page()));
+                        break;
+                    case (int)MenuItemType.Question4:
+                        MenuPages.Add(id, new NavigationPage(new Question4Page()));
+                        break;
                 }
             }
 

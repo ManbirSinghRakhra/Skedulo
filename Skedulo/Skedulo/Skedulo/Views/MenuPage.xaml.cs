@@ -19,7 +19,9 @@ namespace Skedulo.Views
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
+                new HomeMenuItem {Id = MenuItemType.Question3, Title="Question 3"},
+                new HomeMenuItem {Id = MenuItemType.Question4, Title="Question 4"}
             };
 
             ListViewMenu.ItemsSource = menuItems;

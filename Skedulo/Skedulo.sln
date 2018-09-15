@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skedulo.iOS", "Skedulo\Sked
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skedulo.UWP", "Skedulo\Skedulo.UWP\Skedulo.UWP.csproj", "{AD3B23A0-409B-448C-BA74-31FF675BE615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skedulo", "Skedulo\Skedulo\Skedulo.csproj", "{0E59619B-E46B-42BF-B7CD-DBDC0BE7C4A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skedulo", "Skedulo\Skedulo\Skedulo.csproj", "{0E59619B-E46B-42BF-B7CD-DBDC0BE7C4A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skedulo.IntegrationTests", "Skedulo.IntegrationTests\Skedulo.IntegrationTests.csproj", "{43F64A15-20CF-47BD-80FB-16102556107B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,30 @@ Global
 		{0E59619B-E46B-42BF-B7CD-DBDC0BE7C4A2}.Release|x86.ActiveCfg = Release|Any CPU
 		{0E59619B-E46B-42BF-B7CD-DBDC0BE7C4A2}.Release|x86.Build.0 = Release|Any CPU
 		{0E59619B-E46B-42BF-B7CD-DBDC0BE7C4A2}.Release|x86.Deploy.0 = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|x64.Build.0 = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Debug|x86.Build.0 = Debug|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|ARM.Build.0 = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|iPhone.Build.0 = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|x64.ActiveCfg = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|x64.Build.0 = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|x86.ActiveCfg = Release|Any CPU
+		{43F64A15-20CF-47BD-80FB-16102556107B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

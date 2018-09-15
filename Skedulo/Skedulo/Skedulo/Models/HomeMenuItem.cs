@@ -7,7 +7,9 @@ namespace Skedulo.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        Question3,
+        Question4
     }
     public class HomeMenuItem
     {

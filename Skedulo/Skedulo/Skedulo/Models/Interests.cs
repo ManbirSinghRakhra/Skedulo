@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Skedulo.Models
+﻿namespace Skedulo.Models
 {
-    class Interests
+    public class Interests
     {
+        public string PersonId { get; set; }
+        public string Name { get; set; }
     }
 }
