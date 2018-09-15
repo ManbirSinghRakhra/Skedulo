@@ -28,6 +28,10 @@ namespace Skedulo.Services.ServicesImpl
                     content = await response.Content.ReadAsStringAsync();
                 }
             }
+            catch(HttpRequestException ex)
+            {
+                throw new Exception(ex.Message);
+            }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);

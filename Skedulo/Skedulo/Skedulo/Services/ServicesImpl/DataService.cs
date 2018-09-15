@@ -16,7 +16,7 @@ namespace Skedulo.Services.ServicesImpl
         public async Task<List<Interests>> GetInterestsAsync()
         {
             var interests = new List<Interests>();
-            var interestsContent = await restService.RefreshDataAsync($"http://{Constants.IpAddress}:3000/interests?personIds=1,2");
+            var interestsContent = await restService.RefreshDataAsync($"http://{Constants.IpAddress}:3000/interests?personIds=1,2,3");
             interests = JsonConvert.DeserializeObject<List<Interests>>(interestsContent);
             return interests;
         }
@@ -38,12 +38,12 @@ namespace Skedulo.Services.ServicesImpl
         public async Task<List<People>> PopulatePeopleWithRichestAsync(List<People> people)
         {
             var richestPerson = await GetRichestPersonAsync();
-            if(people.Any(c => c.Id.Equals(richestPerson.RichestPerson)))
+            if (people.Any(c => c.Id.Equals(richestPerson.RichestPerson.ToString())))
             {
-                var person = people.FirstOrDefault(c => c.Id.Equals(richestPerson.RichestPerson));
+                var person = people.FirstOrDefault(c => c.Id.Equals(richestPerson.RichestPerson.ToString()));
                 person.IsRichest = true;
             }
-            
+
             return people;
         }
 
