@@ -30,7 +30,20 @@ namespace Skedulo.Services.ServicesImpl
             {
                 people = await PopulatePeopleWithInterestsAsync(people);
                 people = await PopulatePeopleWithSkillsAsync(people);
+                people = await PopulatePeopleWithRichestAsync(people);
             }
+            return people;
+        }
+
+        public async Task<List<People>> PopulatePeopleWithRichestAsync(List<People> people)
+        {
+            var richestPerson = await GetRichestPersonAsync();
+            if(people.Any(c => c.Id.Equals(richestPerson.RichestPerson)))
+            {
+                var person = people.FirstOrDefault(c => c.Id.Equals(richestPerson.RichestPerson));
+                person.IsRichest = true;
+            }
+            
             return people;
         }
 

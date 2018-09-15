@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Skedulo.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,8 @@ namespace Skedulo.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Question4Page : ContentPage
 	{
-		public Question4Page ()
+
+        public Question4Page ()
 		{
 			InitializeComponent ();
 		}
