@@ -12,6 +12,7 @@ namespace Skedulo.Services
         Task<List<Skills>> GetSkillsAsync();
         Task<List<Interests>> GetInterestsAsync();
         Task<Richest> GetRichestPersonAsync();
+        Task<List<Items>> GetGithubUsersAsync(string searchString);
 
     }
 }

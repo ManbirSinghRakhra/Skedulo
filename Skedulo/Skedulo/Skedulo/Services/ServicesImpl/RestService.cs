@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace Skedulo.Services.ServicesImpl
@@ -12,6 +13,10 @@ namespace Skedulo.Services.ServicesImpl
         {
             client = new HttpClient();
             client.MaxResponseContentBufferSize = 256000;
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add(
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36");
         }
 
 
@@ -28,7 +33,7 @@ namespace Skedulo.Services.ServicesImpl
                     content = await response.Content.ReadAsStringAsync();
                 }
             }
-            catch(HttpRequestException ex)
+            catch (HttpRequestException ex)
             {
                 throw new Exception(ex.Message);
             }

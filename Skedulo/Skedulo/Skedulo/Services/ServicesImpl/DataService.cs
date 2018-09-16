@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Skedulo.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -83,6 +84,27 @@ namespace Skedulo.Services.ServicesImpl
                     people.FirstOrDefault(c => c.Id.Equals(interest.PersonId)).Interests.Add(interest);
             }
             return people;
+        }
+
+        public async Task<List<Items>> GetGithubUsersAsync(string searchString)
+        {
+            var list_of_items = new List<Items>();
+            var usersContent = await restService.RefreshDataAsync($"https://api.github.com/search/users?q={searchString}");
+            JObject results = JObject.Parse(usersContent);
+            var items = results["items"];
+            foreach (var item in items)
+            {
+                list_of_items.Add(new Items
+                {
+                    avatar_url = (string)item["avatar_url"],
+                    login = (string)item["login"],
+                    score = (int)item["score"],
+                    type = (string)item["type"]
+                });
+            }
+
+
+            return list_of_items;
         }
     }
 }

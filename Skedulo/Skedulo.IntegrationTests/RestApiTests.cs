@@ -1,7 +1,7 @@
 using Skedulo.Services;
 using Skedulo.Services.ServicesImpl;
-using Xunit;
 using System.Linq;
+using Xunit;
 
 namespace Skedulo.IntegrationTests
 {
@@ -75,6 +75,17 @@ namespace Skedulo.IntegrationTests
 
 
             Assert.Equal(expected, actual);
+        }
+
+
+        [Fact]
+        public async System.Threading.Tasks.Task GetGithubUsersAsync_ReturnListOfUsersAsync()
+        {
+            IDataService dataService = CreateDefaultDataService();
+
+            var items = await dataService.GetGithubUsersAsync("Manbir");
+
+            Assert.True(items.Count > 0, items.Count.ToString());
         }
     }
 }

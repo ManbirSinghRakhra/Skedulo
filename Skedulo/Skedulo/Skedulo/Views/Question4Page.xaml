@@ -1,12 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Skedulo.Views.Question4Page">
+             x:Class="Skedulo.Views.Question4Page" Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="searchString" Placeholder="...Search..." HorizontalOptions="FillAndExpand" TextChanged="SearchString_TextChanged" ReturnType="Search"/>
+                <Button x:Name="searchButton" Text="Search" Clicked="searchButton_Clicked"/>
+            </StackLayout>
+            <ListView ItemsSource="{Binding Items}" 
+                      HasUnevenRows="True" 
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsPullToRefreshEnabled="true"
+                      VerticalOptions="FillAndExpand"
+                      CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Image Source="{Binding avatar_url}" WidthRequest="100" HeightRequest="100"/>
+                                <Label Text="{Binding login}" FontSize="16"/>
+                                <Label Text="{Binding type}" FontSize="16"/>
+                                <Label Text="{Binding score}" FontSize="16"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
