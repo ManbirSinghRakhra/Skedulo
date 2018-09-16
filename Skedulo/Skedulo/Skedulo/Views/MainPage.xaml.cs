@@ -1,5 +1,4 @@
 ﻿using Skedulo.Models;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -17,7 +16,7 @@ namespace Skedulo.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Question3, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -26,12 +25,6 @@ namespace Skedulo.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        break;
                     case (int)MenuItemType.Question3:
                         MenuPages.Add(id, new NavigationPage(new Question3Page()));
                         break;
