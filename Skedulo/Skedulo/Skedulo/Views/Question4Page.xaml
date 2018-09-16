@@ -8,6 +8,7 @@
                 <Entry x:Name="searchString" Placeholder="...Search..." HorizontalOptions="FillAndExpand" TextChanged="SearchString_TextChanged" ReturnType="Search"/>
                 <Button x:Name="searchButton" Text="Search" Clicked="searchButton_Clicked"/>
             </StackLayout>
+            <ActivityIndicator Color="Red" IsRunning="{Binding IsBusy}"/>
             <ListView ItemsSource="{Binding Items}" 
                       HasUnevenRows="True" 
                       IsRefreshing="{Binding IsBusy, Mode=OneWay}"
